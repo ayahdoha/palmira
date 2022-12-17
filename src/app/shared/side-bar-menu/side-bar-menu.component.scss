@@ -1,0 +1,65 @@
+.side-tabs {
+  height: 100%;
+  border-radius: 8px;
+  background-color: #1a4e6e;
+  padding-top: 40px;
+  background-image: url('../../../assets/images/tabs-bg.png');
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  .nav-item {
+    margin-bottom: 5px;
+    width: 100%;
+  }
+  .nav-item.active-li {
+    position: relative;
+  }
+  .nav-link {
+    padding: 6px 0px 6px 8px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 0px;
+    border-left: 0px solid #174874;
+    margin-left: 12px;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 93%;
+  }
+  .nav-link.active {
+    color: #16375B;
+    border-left: 0px solid #174874;
+    background-color: #E8EDF2;
+    border-top-left-radius: 180px;
+    border-bottom-left-radius: 180px;
+    position: relative;
+  }
+}
+.nav-pills {
+  .show {
+    >.nav-link {
+      color: #16375B;
+      border-left: 0px solid #174874;
+      background-color: #E8EDF2;
+      border-top-left-radius: 180px;
+      border-bottom-left-radius: 180px;
+      position: relative;
+    }
+  }
+}
+.active-li {
+  &:before {
+    content: '';
+    position: absolute;
+    height: 110px;
+    width: 26px;
+    top: -40.4px;
+    right: 0px;
+    background-image: url('/assets/images/active-tab-bg2.png');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

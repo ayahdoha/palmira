@@ -1,0 +1,17 @@
+.breadcrumb {
+  font-size: 13px;
+  padding: .5rem .75rem;
+  margin-bottom: 1rem;
+  background-color: #d2dbe4;
+  border-radius: 180px;
+}
+li.breadcrumb-item {
+  a {
+    font-weight: bold !important;
+    color: #384E64;
+  }
+}
+.breadcrumb-item.active {
+  color: #4B88BC !important;
+  font-weight: bold !important;
+}
