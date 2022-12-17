@@ -1,0 +1,49 @@
+li.nav-item.lang span {
+  float: left;
+  margin-top: -4px;
+  display: block;
+}
+
+.header-actions {
+  cursor: pointer !important;
+}
+
+.header-actions img {
+  height: 21px;
+  transition: all 200ms ease-in;
+  transform: scale(1);
+}
+
+.header-actions img:hover {
+  transition: all 100ms ease-in;
+  transform: scale(1.05);
+}
+
+.search {
+  margin-top: 13px;
+  cursor: pointer;
+  height: 50px;
+}
+
+.right-header-actions .dropdown-item {
+  font-size: 12px;
+  color: #768791;
+}
+.settings_voice {
+  margin-top: 13px;
+  height: 50px;
+  cursor: pointer;
+}
+.Search-input:focus {
+  box-shadow: none;
+  border: 0px;
+  border-bottom: 1px solid #4B88BC;
+  background-color: #fff;
+}
+.icon-border-bottom-green {
+  border-bottom: 1px solid #4B88BC;
+}
+
+.icon-border-bottom-white {
+  border-bottom: 1px solid #ffffff;
+}

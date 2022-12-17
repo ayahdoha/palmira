@@ -7,7 +7,7 @@
         </div>
       </div>-->
 
-      <dx-gantt scaleType="weeks" height="700">
+      <dx-gantt [taskListWidth]="500" scaleType="weeks" height="650">
         <dxo-tasks [dataSource]="tasks"></dxo-tasks>
         <dxo-dependencies [dataSource]="dependencies"></dxo-dependencies>
         <dxo-resources [dataSource]="resources"></dxo-resources>
@@ -15,7 +15,7 @@
           [dataSource]="resourceAssignments"
         ></dxo-resource-assignments>
 
-        <dxi-column dataField="title" caption="Subject" [width]="300"></dxi-column>
+        <dxi-column dataField="title"  caption="Subject" [width]="300"></dxi-column>
         <dxi-column
           dataField="start"
           caption="Start Date"
