@@ -15,7 +15,6 @@ export class HeaderComponent implements OnInit {
 
   @HostListener('document:click', ['$event'])
   onClickBody(event : any) {
-    console.log(this.showProfileMenu);
     if (this.eRef.nativeElement.querySelector('.profile-toggle-menu') && !this.eRef.nativeElement.querySelector('.profile-toggle-menu').contains(event.target) ){
       this.showProfileMenu = false;
     }

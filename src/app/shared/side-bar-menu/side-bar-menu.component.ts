@@ -11,5 +11,15 @@ export class SideBarMenuComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  onProjectGroupClick($event: any){
+    let clickedElement = $event.target || $event.srcElement;
+    if( clickedElement.nodeName === "LI" ) {
+      let isCertainButtonAlreadyActive = clickedElement.parentElement.querySelector(".active-li");
+      if( isCertainButtonAlreadyActive ) {
+        isCertainButtonAlreadyActive.classList.remove("active-li");
+      }
+      clickedElement.className += " active-li";
+    }
 
+  }
 }

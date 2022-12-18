@@ -176,6 +176,7 @@ const resourceAssignments: ResourceAssignment[] =[{
   providedIn: 'root'
 })
 export class DataService {
+  showProjectHeader = true;
   constructor() {
   }
   getTasks(): Task[] {

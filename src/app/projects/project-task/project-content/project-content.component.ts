@@ -17,6 +17,7 @@ export class ProjectContentComponent implements OnInit {
     this.dependencies = service.getDependencies();
     this.resources = service.getResources();
     this.resourceAssignments = service.getResourceAssignments();
+    this.service.showProjectHeader = true;
   }
 
   ngOnInit(): void {

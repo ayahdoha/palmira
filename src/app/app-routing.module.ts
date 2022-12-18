@@ -3,12 +3,23 @@ import { CommonModule } from '@angular/common';
 import {Routes, RouterModule} from '@angular/router';
 
 import {ProjectTaskComponent} from "./projects/project-task/project-task.component";
+import {ProjectDetailsComponent} from "./projects/project-task/project-details/project-details.component";
+import {ProjectContentComponent} from "./projects/project-task/project-content/project-content.component";
 const routes: Routes = [
-  {path: '', component: ProjectTaskComponent,
-  loadChildren: () => import('./projects/project-task/project-task.module').then(m => m.ProjectTaskModule),
+  {path: '', redirectTo: 'project-one' , pathMatch: 'full'},
+  {
+    path: 'project-one',
+    component: ProjectTaskComponent,
     data: {
-      breadcrumb: 'Scheduling'
-    },
+      breadcrumb: 'Scheduling',
+    }
+  },
+  {
+    path: 'project-two',
+    component: ProjectDetailsComponent,
+    data: {
+      breadcrumb: 'Second Pro',
+    }
   },
 
   { path: '**', redirectTo: '/'  },

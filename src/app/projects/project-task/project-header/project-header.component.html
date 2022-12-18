@@ -1,6 +1,6 @@
 <div class="card-header">
   <h4 class="card-title">PROJECT TASK</h4>
-  <ul class="card-header-actions float-right">
+  <ul class="card-header-actions float-right" *ngIf="this.service.showProjectHeader">
     <li class="float-right ml-2">
       <div class="btn-group btn-group-toggle" data-toggle="buttons" (click)="onButtonGroupClick($event)">
         <label class="btn btn-secondary">

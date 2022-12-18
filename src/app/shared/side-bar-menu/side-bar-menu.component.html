@@ -1,10 +1,10 @@
 
-  <ul class="nav nav-pills flex-column side-tabs" id="myTab" role="tablist">
-    <li class="nav-item active-li">
-      <a class="nav-link active" data-toggle="tab" href="#project-one" role="tab" aria-controls="project-one" aria-selected="true">Project One</a>
+  <ul class="nav nav-pills flex-column side-tabs" id="myTab" role="tablist" (click)="onProjectGroupClick($event)">
+    <li class="nav-item" routerLinkActive="active-li" [routerLinkActiveOptions]="{ exact: true }">
+      <a class="nav-link" data-toggle="tab" routerLink="/project-one" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" role="tab" aria-controls="project-one" >Project One</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#project-two" role="tab" aria-controls="project-one" aria-selected="false">Project Two</a>
+    <li class="nav-item" routerLinkActive="active-li" [routerLinkActiveOptions]="{ exact: true }">
+      <a class="nav-link" data-toggle="tab"  routerLink="/project-two" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" role="tab" aria-controls="project-one" >Project Two</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" data-toggle="tab" href="#project-three" role="tab" aria-controls="project-three" aria-selected="false">Project Three</a>
