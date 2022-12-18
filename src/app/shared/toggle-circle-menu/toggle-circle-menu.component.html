@@ -1,6 +1,6 @@
-<nav class="circle-menu" id="menu1" upgraded="true" style="left: 15px; top: 15px;">
+<nav class="circle-menu" id="menu1" upgraded="true" [ngClass] = "{'open-menu' : openMenuFlag, 'close-menu': !openMenuFlag}"	 >
   <ul>
-    <li class="dashboard-icon-li" title="Dashboard" style="transition-delay: 0.4s; transform: translateY(45px) scale(1);">
+    <li class="dashboard-icon-li" title="Dashboard">
       <a href="#">
         <div class="noti-icon dashboard-icon"></div>
       </a>
@@ -31,7 +31,7 @@
         </div>
       </div>
     </li>
-    <li class="bussines-icon-li" title="Encyclopedias" style="transition-delay: 0.3s; transform: translateY(90px) scale(1);">
+    <li class="bussines-icon-li" title="Encyclopedias">
       <a href="#">
         <div class="noti-icon bussines-icon"></div>
       </a>
@@ -78,12 +78,12 @@
         </div>
       </div>
     </li>
-    <li class="tasks-icon-li" title="My Actions" style="transition-delay: 0.2s; transform: translateY(135px) scale(1);">
+    <li class="tasks-icon-li" title="My Actions">
       <a href="#">
         <div class="noti-icon tasks-managment"></div>
       </a>
     </li>
-    <li class="user-icon-li" title="Users managment" style="transition-delay: 0.1s; transform: translateY(180px) scale(1);">
+    <li class="user-icon-li" title="Users managment">
       <a href="#">
         <div class="noti-icon user-managment"></div>
       </a>
@@ -146,4 +146,4 @@
       </div>
     </li>
   </ul>
-  <button class="circle-menu-toggle"><i></i></button></nav>
+  <button (click)="openMenuFlag = !openMenuFlag"  class="circle-menu-toggle"><i></i></button></nav>

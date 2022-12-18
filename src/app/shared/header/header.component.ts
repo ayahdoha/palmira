@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, HostListener, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
-
+  constructor(private eRef: ElementRef) { }
+  showProfileMenu = false;
+  showNotificationMenu = false;
   ngOnInit(): void {
   }
 
+
+  @HostListener('document:click', ['$event'])
+  onClickBody(event : any) {
+    console.log(this.showProfileMenu);
+    if (this.eRef.nativeElement.querySelector('.profile-toggle-menu') && !this.eRef.nativeElement.querySelector('.profile-toggle-menu').contains(event.target) ){
+      this.showProfileMenu = false;
+    }
+    if (this.eRef.nativeElement.querySelector('.notification-toggle-menu') && !this.eRef.nativeElement.querySelector('.notification-toggle-menu').contains(event.target) ){
+      this.showNotificationMenu = false;
+    }
+  }
 }

@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ToggleCircleMenuComponent implements OnInit {
 
   constructor() { }
-
+  openMenuFlag = false;
   ngOnInit(): void {
   }
 

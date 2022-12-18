@@ -21,11 +21,12 @@
       <form class="mt-md-0 right-header-actions">
         <ul class="nav navbar-nav navbar-right float-right">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle p-0 position-relative notefications-link" href="#" id="navbardrop" data-toggle="dropdown">
+            <a class="nav-link dropdown-toggle p-0 position-relative notefications-link notification-toggle-menu" href="#" id="navbardrop" data-toggle="dropdown"
+               (click)="showNotificationMenu = !showNotificationMenu">
               <i class="fas fa-bell"></i>
               <span class="badge notefications-icon">2</span>
             </a>
-            <div class="dropdown-menu p-0 messages-list">
+            <div class="dropdown-menu p-0 messages-list" *ngIf="showNotificationMenu" >
               <div class="messages-header">
                 <div class="arrow-up"></div>
                 Notifications
@@ -62,13 +63,13 @@
               </div>
             </div>
           </li>
-
           <li class="nav-item dropdown pr-3 pl-4 light-border-right">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle profile-toggle-menu" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+               (click)="showProfileMenu = !showProfileMenu">
               <img class="user-img mr-2" src="assets/images/user.png">
               <b>Mohammad Ali</b>
             </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" *ngIf="showProfileMenu">
               <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Profile</a>
               <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Settings</a>
               <div class="dropdown-divider"></div>

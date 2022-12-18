@@ -4,7 +4,7 @@ import { HeaderComponent} from "./header/header.component";
 import { BreadcrumbsComponent} from "./breadcrumbs/breadcrumbs.component";
 import { SideBarMenuComponent} from "./side-bar-menu/side-bar-menu.component";
 import { ToggleCircleMenuComponent} from "./toggle-circle-menu/toggle-circle-menu.component";
-
+import { SharedRoutingModule } from './shared-routing.module';
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -13,7 +13,8 @@ import { ToggleCircleMenuComponent} from "./toggle-circle-menu/toggle-circle-men
     ToggleCircleMenuComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedRoutingModule
   ],
   exports: [
     HeaderComponent,

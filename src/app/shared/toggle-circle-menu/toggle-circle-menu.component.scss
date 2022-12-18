@@ -226,3 +226,43 @@
     }
   }
 }
+.circle-menu{
+  left: 15px; top: 15px;
+  &.open-menu{
+    .dashboard-icon-li{
+      transition-delay: 0.4s;
+      transform: translateY(45px) scale(1);
+    }
+    .bussines-icon-li{
+      transition-delay: 0.3s;
+      transform: translateY(90px) scale(1);
+    }
+    .tasks-icon-li{
+      transition-delay: 0.2s;
+      transform: translateY(135px) scale(1);
+    }
+    .user-icon-li{
+      transition-delay: 0.1s;
+      transform: translateY(180px) scale(1);
+    }
+  }
+  &.close-menu{
+    .dashboard-icon-li{
+      transition-delay: 0.1s;
+      transform: translateY(0px) scale(0);
+    }
+    .bussines-icon-li{
+      transition-delay: 0.2s;
+      transform: translateY(0px) scale(0);
+    }
+    .tasks-icon-li{
+      transition-delay: 0.3s;
+      transform: translateY(0px) scale(0);
+    }
+    .user-icon-li{
+      transition-delay: 0.4s;
+      transform: translateY(0px) scale(0);
+    }
+  }
+
+}

@@ -15,7 +15,6 @@ import { ProjectTaskModule} from "./projects/project-task/project-task.module";
     SharedModule,
     RouterModule,
     ProjectTaskModule,
-   // DxGanttModule
   ],
   bootstrap: [AppComponent]
 })
