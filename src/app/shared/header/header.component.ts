@@ -9,6 +9,7 @@ export class HeaderComponent implements OnInit {
   constructor(private eRef: ElementRef) { }
   showProfileMenu = false;
   showNotificationMenu = false;
+  activeSearch = false;
   ngOnInit(): void {
   }
 
